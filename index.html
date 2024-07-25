@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VITO Fry Filter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <div id="hero-section"></div>
+
+  <!-- QUIZ SECTION -->
+  <div id="quiz-section"></div>
+
+  <!-- CALCULATOR SECTION -->
+  <div id="calculator-section"></div>
+
+  <script src="scripts.js"></script>
+  <script>
+    // Load sections
+    fetch('hero.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('hero-section').innerHTML = data);
+
+    fetch('quiz.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('quiz-section').innerHTML = data);
+
+    fetch('calculator.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('calculator-section').innerHTML = data);
+  </script>
+</body>
+</html>
