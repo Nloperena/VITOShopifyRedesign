@@ -1,0 +1,64 @@
+/* BUTTON STYLES */
+.button-link, .button, .start-button {
+    background-color: white;
+    color: #db0006;
+    font-size: 1.1rem;
+    border: 2px solid white;
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 50%;
+    max-width: 220px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s, padding 600ms, font-size 1200ms, width 300ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    display: flex;
+    margin: 3rem auto;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 0px #000000;
+    text-transform: uppercase; /* Added text transformation */
+  }
+  
+  .button-link:hover, .button:hover, .start-button:hover {
+    background-color: #db0006;
+    color: white;
+    font-size: 1.4rem;
+    border-color: #db0006;
+    padding: 2rem 0 2rem 0rem;
+    box-shadow: 0 8px 0px #000000;
+    width: 60%;
+  }
+
+  /* buttons.css */
+.calculate-button, .find-vito-button {
+    background-color: white;
+    color: #db0006;
+    font-size: 1.1rem;
+    border: 2px solid white;
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 50%;
+    max-width: 220px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s, padding 600ms, font-size 1200ms, width 300ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    display: flex;
+    margin: 3rem auto;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 0px #000000;
+}
+
+.calculate-button:hover, .find-vito-button:hover {
+    background-color: #db0006;
+    color: white;
+    font-size: 1.4rem;
+    border-color: #db0006;
+    padding: 2rem 0 2rem 0rem;
+    box-shadow: 0 8px 0px #000000;
+    width: 60%;
+}

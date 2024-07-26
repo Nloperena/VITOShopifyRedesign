@@ -1,0 +1,142 @@
+/* QUIZ STYLES */
+#quiz-section {
+    z-index: 2;
+    position: relative;
+    background-color: black;
+  }
+  
+  .quiz {
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: left; /* Added text alignment */
+  }
+  
+  .quiz-heading {
+    color: #ffcc00;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  
+  .quiz-description {
+    color: #ffcc00;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .start-button-container img {
+    max-width: 300px;
+    max-height: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .quiz-container {
+    display: none;
+    background-color: black;
+    color: #ffdd00;
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 520px;
+  }
+  
+  .quiz-slides {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .quiz-slide {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 400ms ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .quiz-slide.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .quiz-slide.left {
+    transform: translateX(-100%);
+    visibility: hidden;
+  }
+  
+  .quiz-slide.right {
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+  
+  .results {
+    background-color: #ffdd00;
+    color: black;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: none;
+  }
+  
+  .action-buttons {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .action-buttons.active {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .slide-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .button-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .result-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .results img {
+    max-width: 10rem;
+    width: 100%;
+    max-height: auto;
+    margin: 0 auto;
+  }
+  

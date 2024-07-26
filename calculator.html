@@ -1,41 +1,46 @@
+<head>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="buttons.css">
+  <script src="./quiz-calculator.js"></script>
+</head>
+
 <section class="calculate-savings">
-    <div class="container">
-      <h2>Calculate Your Savings</h2>
+  <div class="container">
+      <h2>CALCULATE YOUR SAVINGS</h2>
       <p>Already know what you need? Find out how much you will save.</p>
       <div class="calculator">
-        <div class="calculator-inputs">
-          <label for="weeklyConsumption" class="calculator-label">Weekly Oil Consumption (liters)</label>
-          <input type="number" id="weeklyConsumption" value="30" class="calculator-input" required>
-          
-          <label for="oilPrice" class="calculator-label">Oil Price per Liter</label>
-          <input type="number" id="oilPrice" value="1.00" class="calculator-input" required>
-          
-          <label for="foodType" class="calculator-label">Type of Food</label>
-          <select id="foodType" class="calculator-input" required>
-            <option value="50">Potato Products (50%)</option>
-            <option value="40">Meat (40%)</option>
-            <option value="35">Fish (35%)</option>
-            <option value="30">Fish (30%)</option>
-            <option value="40">Vegetables (40%)</option>
-          </select>
-          
-          <label for="vitoPrice" class="calculator-label">VITO Price ($)</label>
-          <input type="number" id="vitoPrice" value="4999" class="calculator-input" required>
-          
-          <label for="filterAmount" class="calculator-label">Amount of Filters per Week</label>
-          <input type="number" id="filterAmount" value="2" class="calculator-input" required>
-          
-          <label for="filterPrice" class="calculator-label">Price per Filter ($)</label>
-          <input type="number" id="filterPrice" value="1.50" class="calculator-input" required>
-        </div>
-        <div class="results-wrapper">
-          <div class="results" id="calculator-result">RESULTS WILL APPEAR HERE</div>
-          <div class="action-buttons">
-            <button class="calculate-button" onclick="calculateROI()">CALCULATE</button>
-            <button class="find-vito-button">FIND THE RIGHT VITO</button>
+          <div class="calculator-inputs">
+              <label for="weeklyConsumption" class="calculator-label">Weekly Oil Consumption (liters)</label>
+              <input type="number" id="weeklyConsumption" value="30" class="calculator-input" required>
+              
+              <label for="oilPrice" class="calculator-label">Oil Price per Liter</label>
+              <input type="number" id="oilPrice" value="1.00" class="calculator-input" required>
+              
+              <label for="foodType" class="calculator-label">Type of Food</label>
+              <select id="foodType" class="calculator-input" required>
+                  <option value="50">Potato Products (50%)</option>
+                  <option value="40">Meat (40%)</option>
+                  <option value="35">Fish (35%)</option>
+                  <option value="30">Fish (30%)</option>
+                  <option value="40">Vegetables (40%)</option>
+              </select>
+              
+              <label for="vitoPrice" class="calculator-label">VITO Price ($)</label>
+              <input type="number" id="vitoPrice" value="4999" class="calculator-input" required>
+              
+              <label for="filterAmount" class="calculator-label">Amount of Filters per Week</label>
+              <input type="number" id="filterAmount" value="2" class="calculator-input" required>
+              
+              <label for="filterPrice" class="calculator-label">Price per Filter ($)</label>
+              <input type="number" id="filterPrice" value="1.50" class="calculator-input" required>
           </div>
-        </div>
+          <div class="results-wrapper">
+              <div class="results" id="calculator-result">RESULTS WILL APPEAR HERE</div>
+              <div class="action-buttons">
+                  <button class="calculate-button" onclick="calculateROI()">CALCULATE</button>
+                  <button class="find-vito-button" onclick="startQuiz()">FIND THE RIGHT VITO</button>
+              </div>
+          </div>
       </div>
-    </div>
-  </section>
-  
+  </div>
+</section>

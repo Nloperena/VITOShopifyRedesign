@@ -1,0 +1,454 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: rgb(0, 0, 0);
+}
+
+/* HERO STYLES */
+#hero-section {
+  z-index: 1;
+  position: relative;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Banner size */
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.background-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content */
+  height: 100%;
+  padding: 20px;
+  color: #ffdd00;
+  text-align: left;
+  background-color:rgba(0, 0, 0, 0.75);
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out the text and image */
+  max-width: 1200px; /* Set a max-width for the inner container */
+  width: 100%;
+  padding-left: 5rem;
+}
+
+.text-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  line-height: 5rem;
+  font-weight: 900;
+}
+
+.hero-content p {
+  font-size: 1.5rem; /* Larger paragraph text */
+  margin-bottom: 20px;
+}
+
+.vito-image {
+  width: 65%;
+  height: auto;
+  padding-top: 15rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  background-color: #ffdd00;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #ffcc00;
+}
+
+.start-button-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* QUIZ STYLES */
+#quiz-section {
+  z-index: 2;
+  position: relative;
+  background-color: black;
+}
+
+.quiz {
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: left; /* Added text alignment */
+}
+
+.quiz-heading {
+  color: #ffcc00;
+  font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.quiz-description {
+  color: #ffcc00;
+  font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.start-button-container img {
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 20px;
+}
+
+.start-button {
+  background-color: #ffdd00;
+  color: black;
+  padding: 15px 25px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase; /* Added text transformation */
+  text-align: left; /* Added text alignment */
+}
+
+.start-button:hover {
+  background-color: #ffd700;
+}
+
+.quiz-container {
+  display: none;
+  background-color: black;
+  color: #ffdd00;
+  padding: 50px 20px;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+  /* Include padding in width */
+  margin: 0 auto;
+  /* Center horizontally */
+  border-radius: 10px;
+  position: relative;
+  /* Ensure relative positioning */
+  overflow: hidden;
+  height: 520px;
+  /* Set a consistent height */
+}
+
+.quiz-slides {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.quiz-slide {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 400ms ease-in-out;
+  opacity: 0;
+  /* Make slides initially invisible */
+  visibility: hidden;
+  /* Hide slides initially */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Center content vertically */
+  height: 100%;
+  /* Ensure slides take up the full height */
+}
+
+.quiz-slide.active {
+  transform: translateX(0);
+  opacity: 1;
+  /* Make the active slide visible */
+  visibility: visible;
+  /* Show the active slide */
+}
+
+.quiz-slide.left {
+  transform: translateX(-100%);
+  visibility: hidden;
+  /* Ensure hidden slides are not visible */
+}
+
+.quiz-slide.right {
+  transform: translateX(100%);
+  visibility: hidden;
+  /* Ensure hidden slides are not visible */
+}
+
+button {
+  background-color: #ffdd00;
+  color: black;
+  padding: 15px 25px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px;
+  /* Add some margin for spacing */
+  text-transform: uppercase; /* Added text transformation */
+  text-align: left; /* Added text alignment */
+}
+
+button:hover {
+  background-color: #ffd700;
+}
+
+.results {
+  background-color: #ffdd00;
+  color: black;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: none;
+  /* Hide the results section initially */
+}
+
+.action-buttons {
+  display: none;
+  /* Hide action buttons initially */
+  margin-top: 20px;
+}
+
+.action-buttons.active {
+  display: flex;
+  /* Show action buttons when active */
+  justify-content: center;
+  gap: 15px;
+}
+
+.slide-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.result-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Ensure text is centered */
+  width: 100%;
+}
+
+.results img {
+  max-width: 10rem;
+  width: 100%;
+  max-height: auto;
+  margin: 0 auto;
+}
+
+/* Calculator Section */
+.calculate-savings {
+  background-color: black;
+  color: #ffdd00;
+  padding: 50px 0;
+  text-align: left; /* Changed to left alignment */
+  position: relative;
+  z-index: 1;
+}
+
+.calculate-savings .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.calculate-savings h2 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase; /* Added text transformation */
+}
+
+.calculate-savings p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.calculator-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.calculator-input {
+  background-color: #ffdd00;
+  color: black;
+  padding: 30px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: text;
+}
+
+.calculator-label {
+  color: #ffdd00;
+  font-size: 1.5rem;
+  margin-bottom: -10px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.results-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.results {
+  background-color: #ffdd00;
+  color: black;
+  padding: 10rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.action-buttons.active {
+  display: flex;
+  /* Show action buttons when active */
+  justify-content: center;
+  gap: 15px;
+}
+
+.start-button-container {
+  text-align: center;
+}
+
+.start-button-container img {
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 20px;
+}
+
+.results img {
+  max-width: 10rem;
+  width: 100%;
+  max-height: auto;
+  margin: 0 auto;
+}
+
+.slide-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.result-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Ensure text is centered */
+  width: 100%;
+}
+
+.results {
+  background-color: #ffdd00;
+  color: black;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: none;
+  /* Hide the results section initially */
+}
+

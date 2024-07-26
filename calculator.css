@@ -1,0 +1,119 @@
+/* Calculator Section */
+.calculate-savings {
+    background-color: black;
+    color: #ffdd00;
+    padding: 50px 0;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .calculate-savings .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .calculate-savings h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .calculate-savings p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .calculator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+  }
+  
+  .calculator-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .calculator-input {
+    background-color: #ffdd00;
+    color: black;
+    padding: 30px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: text;
+  }
+  
+  .calculator-label {
+    color: #ffdd00;
+    font-size: 1.5rem;
+    margin-bottom: -10px;
+    text-align: left;
+    margin-left: 10px;
+  }
+  
+  .results-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .results {
+    background-color: #ffdd00;
+    color: black;
+    padding: 10rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .start-button-container {
+    text-align: center;
+  }
+  
+  .start-button-container img {
+    max-width: 300px;
+    max-height: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .results img {
+    max-width: 10rem;
+    width: 100%;
+    max-height: auto;
+    margin: 0 auto;
+  }
+  
+  .slide-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .button-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .result-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
