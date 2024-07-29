@@ -12,14 +12,20 @@
   justify-content: space-evenly;
   text-align: left;
 }
-
+/* Add styling for the new container */
+.quiz-header-container {
+  padding: 20px 20px 0;
+  text-align: center; /* Center align the text */
+  text-align: left;
+}
 .quiz-heading {
-  color: #ffcc00;
+  color: #ffdd00;
   font-size: 5rem;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 10px;
   text-transform: uppercase;
   text-align: left;
+  font-style: italic;
 }
 .slide-heading {
   color: #000000;
@@ -31,7 +37,7 @@
 }
 
 .quiz-description {
-  color: #ffcc00;
+  color: #ffdd00;
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -104,6 +110,8 @@
   border-radius: 5px;
   margin-top: 20px;
   display: none;
+  max-height: 30rem; /* Set maximum height */
+  overflow-y: auto; /* Add vertical scroll if needed */
 }
 
 .action-buttons {

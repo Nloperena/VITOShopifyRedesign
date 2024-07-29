@@ -8,8 +8,10 @@
 <section id="quiz-section">
     <div class="quiz">
         <div class="start-button-container">
-            <h2 class="quiz-heading">FIND THE RIGHT VITO FOR YOU</h2>
-            <p class="quiz-description">Already know what you need? Take the quiz to find out the best VITO solution for your needs.</p>
+            <div class="quiz-header-container"> <!-- New container for heading and description -->
+                <h2 class="quiz-heading">FIND THE RIGHT VITO FOR YOU</h2>
+                <p class="quiz-description">Don't know where to start? Let's find the right machine for your operation. Make an informed decision and choose the right VITO, the first time.</p>
+            </div>
             <img class="start-img" src="https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vito-portables.png?v=1721673184" alt="VITO Products">
             <button class="start-button" onclick="startQuiz()">TAKE QUIZ</button>
         </div>
@@ -62,6 +64,7 @@
             </div>
             <div class="action-buttons" id="quiz-action-buttons">
                 <button class="button" onclick="startQuiz()">Start over</button>
+                <button class="button" onclick="startQuiz()">Place in Cart</button>
                 <button class="button" onclick="calculateSavings()">Check Savings</button>
             </div>
         </div>

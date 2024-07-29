@@ -54,7 +54,8 @@
 
 .calculate-savings h2 {
   font-size: 5rem;
-  font-weight: 700;
+  font-weight: 900;
+  font-style: italic;
   margin-bottom: 10px;
   text-transform: uppercase;
   text-align: left; /* Keep heading left-aligned */
