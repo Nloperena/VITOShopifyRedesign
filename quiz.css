@@ -1,141 +1,181 @@
-/* QUIZ STYLES */
 #quiz-section {
-    z-index: 2;
-    position: relative;
-    background-color: black;
-  }
-  
-  .quiz {
-    height: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: left; /* Added text alignment */
-  }
-  
-  .quiz-heading {
-    color: #ffcc00;
-    font-size: 5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    text-align: left;
-  }
-  
-  .quiz-description {
-    color: #ffcc00;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .start-button-container img {
-    max-width: 300px;
-    max-height: 300px;
-    margin-bottom: 20px;
-  }
-  
-  .quiz-container {
-    display: none;
-    background-color: black;
-    color: #ffdd00;
-    padding: 50px 20px;
-    text-align: center;
-    max-width: 1200px;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0 auto;
-    border-radius: 10px;
-    position: relative;
-   
-  }
-  
-  .quiz-slides {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .quiz-slide {
-    background-color: black;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    transition: transform 400ms ease-in-out;
-    opacity: 0;
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-  
-  .quiz-slide.active {
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .quiz-slide.left {
-    transform: translateX(-100%);
-    visibility: hidden;
-  }
-  
-  .quiz-slide.right {
-    transform: translateX(100%);
-    visibility: hidden;
-  }
-  
-  .results {
-    background-color: #ffdd00;
-    color: black;
-    padding: 20px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: none;
-  }
-  
-  .action-buttons {
-    display: none;
-    margin-top: 20px;
-  }
-  
-  .action-buttons.active {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .slide-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .button-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .result-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .results img {
-    max-width: 10rem;
-    width: 100%;
-    max-height: auto;
-    margin: 0 auto;
-  }
-  
+  font-family: Poppins;
+  z-index: 2;
+  position: relative;
+  background-color: rgba(49, 49, 49, 0.801);
+}
+
+.quiz {
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+.quiz-heading {
+  color: #ffcc00;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: left;
+}
+.slide-heading {
+  color: #000000;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.quiz-description {
+  color: #ffcc00;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.start-button-container img {
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 20px;
+}
+
+.quiz-container {
+  display: none;
+  /* background-color: black; */
+  color: #ffdd00;
+  padding: 50px 20px;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+.quiz-slides {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.quiz-slide {
+  /* background-color: black; */
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 400ms ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.quiz-slide.active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.quiz-slide.left {
+  transform: translateX(-100%);
+  visibility: hidden;
+}
+
+.quiz-slide.right {
+  transform: translateX(100%);
+  visibility: hidden;
+}
+
+.quiz-results {
+  background-color: #ffdd00;
+  color: black;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: none;
+}
+
+.action-buttons {
+  display: none;
+  margin-top: 20px;
+}
+
+.action-buttons.active {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.slide-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  gap: 5rem;
+  width: 100%; /* Ensure the wrapper takes the full width */
+  justify-content: space-evenly;
+}
+
+.button-wrapper button {
+  background-color: white;
+  color: #db0006;
+  font-size: 1.1rem;
+  border: 2px solid white;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+  border-radius: 40px;
+  width: 30%; /* Adjust the width to be a percentage of the container */
+  max-width: 220px;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s, padding 600ms, font-size 1200ms, width 300ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 0px #000000;
+  text-transform: uppercase;
+}
+
+.button-wrapper button:hover {
+  background-color: #db0006;
+  color: white;
+  font-size: 1.4rem;
+  border-color: #db0006;
+  padding: 2rem 0 2rem 0rem;
+  width: 35%; /* Adjust the width on hover for better visual */
+  box-shadow: 0 8px 0px #000000;
+}
+
+.result-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.results img {
+  max-width: 10rem;
+  width: 100%;
+  max-height: auto;
+  margin: 0 auto;
+}

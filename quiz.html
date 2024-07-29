@@ -6,64 +6,64 @@
 </head>
 
 <section id="quiz-section">
-  <div class="quiz">
-      <div class="start-button-container">
-          <h2 class="quiz-heading">FIND THE RIGHT VITO FOR YOU</h2>
-          <p class="quiz-description">Already know what you need? Take the quiz to find out the best VITO solution for your needs.</p>
-          <img class="start-img" src="https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vito-portables.png?v=1721673184" alt="VITO Products">
-          <button class="start-button" onclick="startQuiz()">TAKE QUIZ</button>
-      </div>
+    <div class="quiz">
+        <div class="start-button-container">
+            <h2 class="quiz-heading">FIND THE RIGHT VITO FOR YOU</h2>
+            <p class="quiz-description">Already know what you need? Take the quiz to find out the best VITO solution for your needs.</p>
+            <img class="start-img" src="https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vito-portables.png?v=1721673184" alt="VITO Products">
+            <button class="start-button" onclick="startQuiz()">TAKE QUIZ</button>
+        </div>
 
-      <div class="quiz-container" id="quiz-container">
-          <div class="quiz-slides">
-              <div id="slide1" class="quiz-slide active">
-                  <div class="slide-header">
-                      <h2>How Many Fryers are In Your Establishment?</h2>
-                      <p>Select the number of fryers in your establishment</p>
-                      <div class="question-number">Question 1 of 3</div>
-                  </div>
-                  <div class="button-wrapper">
-                      <button onclick="nextSlide(1, 1)">1-3</button>
-                      <button onclick="nextSlide(1, 4)">4</button>
-                      <button onclick="nextSlide(1, 5)">4+</button>
-                  </div>
-              </div>
+        <div class="quiz-container" id="quiz-container">
+            <div class="quiz-slides">
+                <div id="slide1" class="quiz-slide active">
+                    <div class="slide-header">
+                        <h2>How Many Fryers are In Your Establishment?</h2>
+                        <p>Select the number of fryers in your establishment</p>
+                        <div class="question-number">Question 1 of 3</div>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="button" onclick="nextSlide(1, 1)">1-3</button>
+                        <button class="button" onclick="nextSlide(1, 4)">4</button>
+                        <button class="button" onclick="nextSlide(1, 5)">4+</button>
+                    </div>
+                </div>
 
-              <div id="slide2" class="quiz-slide right">
-                  <div class="slide-header">
-                      <h2>What is the volume of oil in your fryers?</h2>
-                      <p>Select the oil volume per fryer in pounds</p>
-                      <div class="question-number">Question 2 of 3</div>
-                  </div>
-                  <div class="button-wrapper">
-                      <button onclick="nextSlide(2, 22)">Up to 22 pounds</button>
-                      <button onclick="nextSlide(2, 37)">Up to 37 pounds</button>
-                      <button onclick="nextSlide(2, 38)">More than 37 pounds</button>
-                  </div>
-              </div>
+                <div id="slide2" class="quiz-slide right">
+                    <div class="slide-header">
+                        <h2>What is the volume of oil in your fryers?</h2>
+                        <p>Select the oil volume per fryer in pounds</p>
+                        <div class="question-number">Question 2 of 3</div>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="button" onclick="nextSlide(2, 22)">Up to 22 pounds</button>
+                        <button class="button" onclick="nextSlide(2, 37)">Up to 37 pounds</button>
+                        <button class="button" onclick="nextSlide(2, 38)">More than 37 pounds</button>
+                    </div>
+                </div>
 
-              <div id="slide3" class="quiz-slide right">
-                  <div class="slide-header">
-                      <h2>What do you primarily cook in your fryers?</h2>
-                      <p>Select the primary type of food cooked</p>
-                      <div class="question-number">Question 3 of 3</div>
-                  </div>
-                  <div class="button-wrapper">
-                      <button onclick="getRecommendation('Carbs')">Carbs (e.g., fries, donuts)</button>
-                      <button onclick="getRecommendation('Proteins')">Proteins (e.g., chicken, fish)</button>
-                  </div>
-              </div>
-          </div>
+                <div id="slide3" class="quiz-slide right">
+                    <div class="slide-header">
+                        <h2>What do you primarily cook in your fryers?</h2>
+                        <p>Select the primary type of food cooked</p>
+                        <div class="question-number">Question 3 of 3</div>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="button" onclick="getRecommendation('Carbs')">Carbs</button>
+                        <button class="button" onclick="getRecommendation('Proteins')">Proteins</button>
+                    </div>
+                </div>
+            </div>
 
-          <div class="results" id="quiz-result">
-              <div class="result-wrapper">
-                  Click Get Recommendation to see which VITO machine is best for you
-              </div>
-          </div>
-          <div class="action-buttons" id="quiz-action-buttons">
-              <button class="start-button" onclick="startQuiz()">Start over</button>
-              <button class="start-button" onclick="calculateSavings()">Calculate Savings</button>
-          </div>
-      </div>
-  </div>
+            <div class="quiz-results" id="quiz-result">
+                <div class="result-wrapper">
+                    Click Get Recommendation to see which VITO machine is best for you
+                </div>
+            </div>
+            <div class="action-buttons" id="quiz-action-buttons">
+                <button class="button" onclick="startQuiz()">Start over</button>
+                <button class="button" onclick="calculateSavings()">Check Savings</button>
+            </div>
+        </div>
+    </div>
 </section>

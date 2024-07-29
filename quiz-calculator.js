@@ -86,14 +86,36 @@ function getRecommendation(foodType) {
         imgSrc = "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
     }
 
+    
+
     document.querySelector('.quiz-slide.active').classList.remove('active');
     document.querySelector('#quiz-result').style.display = 'block'; // Show the results section
     document.querySelector('#quiz-action-buttons').classList.add('active'); // Show the action buttons
     document.getElementById('quiz-result').innerHTML = `
     <div class="result-wrapper">
-        We Recommend the ${result}
+        <h2 class = 'slide-heading'>We Recommend the ${result} </h2>
         <img src="${imgSrc}" alt="${result}">
         <a href="path/to/product-page" target="_blank">Learn More</a>
     </div>
 `;
 }
+
+// quiz-calculator.js
+
+// Existing code...
+
+function clearCalculator() {
+    // Clear all input fields
+    document.getElementById('weeklyConsumption').value = '';
+    document.getElementById('oilPrice').value = '';
+    document.getElementById('foodType').value = '50'; // Reset to default option
+    document.getElementById('vitoPrice').value = '';
+    document.getElementById('filterAmount').value = '';
+    document.getElementById('filterPrice').value = '';
+    
+    // Clear the results
+    const resultElement = document.getElementById('calculator-result');
+    resultElement.innerText = 'RESULTS WILL APPEAR HERE';
+    resultElement.style.display = 'none'; // Hide the results
+}
+

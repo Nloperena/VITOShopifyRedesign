@@ -1,73 +1,193 @@
-/* HERO STYLES */
-#hero-section {
-    z-index: 1;
-    position: relative;
-  }
-  
-  .hero {
-    position: relative;
-    width: 100%;
-    height: 70vh; /* Banner size */
-  }
-  
-  .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-  }
-  
-  .background-video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+/* General Hero Section Styling */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Banner size */
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.background-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Center the content */
+  height: 100%;
+  padding: 20px;
+  color: #ffdd00;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Space out the text and image */
+  max-width: 1200px;
+  /* Set a max-width for the inner container */
+  width: 100%;
+  padding-left: 5rem;
+}
+
+.text-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  line-height: 5rem;
+  font-weight: 900;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  /* Larger paragraph text */
+  margin-bottom: 20px;
+}
+
+.vito-image {
+  width: 65%;
+  height: auto;
+  padding-top: 15rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 767px) {
   .hero-content {
-    position: relative;
-    z-index: 1;
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center the content */
-    height: 100%;
-    padding: 20px;
-    color: #ffdd00;
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0.75);
+    /* Center align the content */
   }
-  
+
   .content-wrapper {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* Space out the text and image */
-    max-width: 1200px; /* Set a max-width for the inner container */
-    width: 100%;
-    padding-left: 5rem;
+    padding-left: 1rem;
+    /* Corrected padding value */
+    padding-right: 1rem;
+    /* Added padding for right side */
+    text-align: center;
+    /* Center text for smaller screens */
+    margin: 20rem 0 -15rem 0;
   }
-  
+
   .text-content {
-    max-width: 50%;
+    max-width: 100%;
+    text-align: left;
+    padding: 4rem 3rem;
   }
-  
+
   .hero-content h1 {
-    font-size: 6rem;
-    font-weight: 700;
-    margin-bottom: 0;
-    line-height: 5rem;
-    font-weight: 900;
+    font-size: 5rem;
+    margin-top: 1rem;
   }
-  
+
   .hero-content p {
-    font-size: 1.5rem; /* Larger paragraph text */
-    margin-bottom: 20px;
+    font-size: 1rem;
+    /* Smaller paragraph text for smaller screens */
   }
-  
+
   .vito-image {
-    width: 65%;
-    height: auto;
-    padding-top: 15rem;
+    width: 100%;
+    padding: 0;
+    margin: -5rem 0 20rem;
   }
-  
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    /* Row direction for buttons */
+    gap: 10px;
+    /* Space between buttons */
+    justify-content: center;
+    /* Center the buttons */
+    width: 100%;
+  }
+
+  .button {
+    flex: 1;
+    /* Make buttons grow to fill available space */
+    text-align: center;
+    /* Center text in buttons */
+  }
+}
+
+@media (max-width: 425px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    /* Center align the content */
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1rem;
+    /* Corrected padding value */
+    padding-right: 1rem;
+    /* Added padding for right side */
+    text-align: center;
+    /* Center text for smaller screens */
+    margin: 20rem 0 0rem 0;
+  }
+
+  .text-content {
+    max-width: 100%;
+    text-align: left;
+    padding: 4rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 5rem;
+    margin-top: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    /* Smaller paragraph text for smaller screens */
+  }
+
+  .vito-image {
+    width: 100%;
+    padding: 0;
+    margin: -5rem 0 20rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    /* Row direction for buttons */
+    gap: 10px;
+    /* Space between buttons */
+    justify-content: center;
+    /* Center the buttons */
+    width: 100%;
+  }
+
+  .button {
+    flex: 1;
+    /* Make buttons grow to fill available space */
+    text-align: center;
+    /* Center text in buttons */
+  }
+}
