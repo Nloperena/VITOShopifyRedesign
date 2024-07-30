@@ -1,23 +1,27 @@
 #quiz-section {
-  font-family: Poppins;
   z-index: 2;
   position: relative;
   background-color: rgba(49, 49, 49, 0.801);
 }
 
 .quiz {
-  height: 800px;
+  padding: 0 10rem;
+  height: 120vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   text-align: left;
+  overflow: hidden;
+  position: relative;
 }
+
 /* Add styling for the new container */
 .quiz-header-container {
   padding: 20px 20px 0;
   text-align: center; /* Center align the text */
   text-align: left;
 }
+
 .quiz-heading {
   color: #ffdd00;
   font-size: 5rem;
@@ -27,6 +31,7 @@
   text-align: left;
   font-style: italic;
 }
+
 .slide-heading {
   color: #000000;
   font-size: 3rem;
@@ -38,19 +43,18 @@
 
 .quiz-description {
   color: #ffdd00;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
 .start-button-container img {
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 400px;
+  max-height: 400px;
   margin-bottom: 20px;
 }
 
 .quiz-container {
   display: none;
-  /* background-color: black; */
   color: #ffdd00;
   padding: 50px 20px;
   text-align: center;
@@ -60,6 +64,7 @@
   margin: 0 auto;
   border-radius: 10px;
   position: relative;
+  height: 100%; /* Ensure it takes the full height */
 }
 
 .quiz-slides {
@@ -70,7 +75,7 @@
 }
 
 .quiz-slide {
-  /* background-color: black; */
+  background-color: #0e0e0ef5;
   position: absolute;
   width: 100%;
   top: 0;
@@ -81,8 +86,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  justify-content: space-evenly; /* Center content */
+  height: 100%; /* Ensure it takes the full height */
+  padding: 20px;
+  overflow: hidden; /* Prevent overflow */
+  box-sizing: border-box;
+  z-index: 1; /* Ensure quiz slide is below buttons */
 }
 
 .quiz-slide.active {
@@ -115,14 +124,12 @@
 }
 
 .action-buttons {
-  display: none;
-  margin-top: 20px;
-}
-
-.action-buttons.active {
-  display: flex;
+  display: flex; /* Ensure buttons are displayed */
   justify-content: center;
-  gap: 15px;
+  gap: 3rem;
+  margin-top: 20px;
+  z-index: 2; /* Bring buttons to the front */
+  position: relative;
 }
 
 .slide-header {
@@ -181,9 +188,19 @@
   width: 100%;
 }
 
-.results img {
-  max-width: 10rem;
-  width: 100%;
-  max-height: auto;
-  margin: 0 auto;
+.result-wrapper img {
+  max-width: 100%; /* Ensure image does not overflow */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 20px; /* Add margin for better spacing */
+}
+
+.result-wrapper a {
+  color: #ffdd00; /* Match link color with the theme */
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-bottom: 20px; /* Add margin for better spacing */
+}
+
+.result-wrapper h2 {
+  margin-top: 20px; /* Add margin for better spacing */
 }

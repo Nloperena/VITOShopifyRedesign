@@ -11,7 +11,7 @@
 .calculate-savings .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15rem;
 }
 
 .calculator-grid {
@@ -42,10 +42,10 @@
 
 .calculator-grid label {
   text-align: center;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 0.6rem;
+  /* font-weight: bold; */
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .results-wrapper {
@@ -125,8 +125,8 @@
 }
 
 .start-button-container img {
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 420px;
+  max-height: 420px;
   margin-bottom: 20px;
 }
 
