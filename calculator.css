@@ -125,18 +125,18 @@
   text-align: center;
 }
 
-.start-button-container img {
+/* .start-button-container img {
   max-width: 420px;
   max-height: 420px;
   margin-bottom: 20px;
-}
+} */
 
-.results img {
+/* .results img {
   max-width: 10rem;
   width: 100%;
   max-height: auto;
   margin: 0 auto;
-}
+} */
 
 .slide-header {
   display: flex;
