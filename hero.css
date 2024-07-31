@@ -52,11 +52,13 @@
 }
 
 .hero-content h1 {
-  font-size: 6rem;
+  font-size: 9rem;
   font-weight: 700;
   margin-bottom: 0;
-  line-height: 5rem;
+  line-height: 8rem;
+  font-style:italic;
   font-weight: 900;
+  
 }
 
 .hero-content p {
@@ -66,13 +68,77 @@
 }
 
 .vito-image {
-  width: 65%;
+  width: 60%;
   height: auto;
   padding-top: 15rem;
 }
 
-/* Responsive Styling */
-@media (max-width: 767px) {
+/* Extra Large Devices, Large Desktops */
+@media (min-width: 1200px) and (max-width: 1599.98px) {
+  .hero-content h1 {
+    font-size: 7rem;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 6rem;
+    
+  }
+}
+
+/* Large Devices, Desktops */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .hero-content h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 5rem;
+    
+  }
+}
+
+/* Medium Devices, Tablets */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-content h1 {
+    font-size: 5.2rem;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 5rem;
+    padding: 0 5rem 0 0rem;
+  }
+
+  .hero-content p {
+    font-size: 1.0rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+}
+
+/* Small Devices, Phones (Landscape) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hero-content h1 {
+    font-size: 50.2rem;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 4.8rem;
+    padding: 10rem 0 0 0;
+  }
+
+  .hero-content p {
+    font-size: 1.0rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
   .hero-content {
     flex-direction: column;
     align-items: center;
@@ -132,7 +198,24 @@
   }
 }
 
-@media (max-width: 425px) {
+/* Extra Small Devices, Phones (Portrait) */
+@media (max-width: 575.98px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
   .hero-content {
     flex-direction: column;
     align-items: center;
@@ -154,13 +237,14 @@
   .text-content {
     max-width: 100%;
     text-align: left;
-    padding: 4rem 1rem;
+    padding: 3rem 0rem 17rem;
   }
 
   .hero-content h1 {
     font-size: 5rem;
-    margin-top: 1rem;
-  }
+    line-height: 5rem;
+}
+
 
   .hero-content p {
     font-size: 1rem;
@@ -168,10 +252,11 @@
   }
 
   .vito-image {
-    width: 100%;
+    display:none;
+    width: 140%;
     padding: 0;
-    margin: -5rem 0 20rem;
-  }
+    margin: -19rem 0 20rem;
+}
 
   .buttons {
     display: flex;

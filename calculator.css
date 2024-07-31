@@ -11,7 +11,7 @@
 .calculate-savings .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15rem;
+  padding: 0 2rem;
 }
 
 .calculator-grid {
@@ -28,6 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .calculator-grid input, 
@@ -53,7 +54,7 @@
 }
 
 .calculate-savings h2 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 900;
   font-style: italic;
   margin-bottom: 10px;
@@ -98,7 +99,7 @@
   font-size: 1.2rem;
   margin-bottom: -10px;
   text-align: left;
-  margin-left: 10px;
+
   width: 100%; /* Ensure label width matches input */
 }
 
@@ -142,4 +143,182 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+}
+/* Extra Large Devices, Large Desktops */
+@media (min-width: 1200px) {
+  .calculate-savings .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15rem;
+}
+.results {
+  background-color: #ffdd00;
+  color: black;
+  padding: 2rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 50%;
+  text-align: center;
+}
+.calculator-grid input, .calculator-grid select, .calculator-grid button {
+  width: 100%;
+  padding: 15px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+}
+/* Large Devices, Desktops */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .calculate-savings .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 9rem;
+}
+.results {
+  background-color: #ffdd00;
+  color: black;
+  padding: 2rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 50%;
+  text-align: center;
+}
+.calculator-grid input, .calculator-grid select, .calculator-grid button {
+  width: 100%;
+  padding: 15px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+}
+
+@media (min-width: 768px) and (max-width:992px){
+  .calculate-savings .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 6rem;
+  }
+  .calculator-grid input, .calculator-grid select, .calculator-grid button {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.calculator-grid label {
+  text-align: center;
+  margin-bottom: 0.6rem;
+  /* font-weight: bold; */
+  width: 100%;
+  font-size: 0.6rem;
+}
+.calculate-savings p {
+  font-size: 1.0rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.results {
+  background-color: #ffdd00;
+  color: black;
+  padding: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 50%;
+  text-align: center;
+}
+}
+
+@media(min-width: 576px) and (max-width: 767.98px) {
+  .calculate-savings .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+  .calculator-grid input, .calculator-grid select, .calculator-grid button {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.calculator-grid label {
+  text-align: center;
+  margin-bottom: 0.6rem;
+  /* font-weight: bold; */
+  width: 100%;
+  font-size: 0.6rem;
+}
+.calculate-savings p {
+  font-size: 1.0rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.results {
+  background-color: #ffdd00;
+  color: black;
+  padding: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 50%;
+  text-align: center;
+}
+}
+
+@media(max-width: 575.98px) {
+  .calculate-savings .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+  .calculator-grid input, .calculator-grid select, .calculator-grid button {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.calculator-grid label {
+  text-align: center;
+  margin-bottom: 0.3rem;
+  /* font-weight: bold; */
+  width: 100%;
+  font-size: 0.5rem;
+}
+.calculate-savings p {
+  font-size: .9rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.results {
+  background-color: #ffdd00;
+  color: black;
+  padding: 2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 50%;
+  text-align: center;
+}
+.calculate-savings h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 3rem;
+}
+.calculate-savings {
+  background-color: black;
+  color: #ffdd00;
+  padding: 1rem;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
 }
