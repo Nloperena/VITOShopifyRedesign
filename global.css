@@ -9,16 +9,16 @@ body {
   height: 100vh;
   overflow-x: hidden;
   background-color: rgb(0, 0, 0);
-  cursor: url('./assets/cursor1.png'), none; /* Default spatula cursor */
+  cursor: url('./mouse/cursor1.png'), none; /* Default spatula cursor */
 }
 /* cursor */
 
 body.clicked, a.clicked, button.clicked{
-  cursor: url('./assets/cursor2.png'), none; /* Spatula cursor on click */
+  cursor: url('./mouse/cursor2.png'), none; /* Spatula cursor on click */
 }
 
 a, button {
-  cursor: url('./assets/cursor1.png'), grab;
+  cursor: url('./mouse/cursor2.png'), grab;
 }
 
 
