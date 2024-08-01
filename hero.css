@@ -52,8 +52,10 @@
   background-color: #000000bd;
   max-width: 100%;
   text-align: left;
-  padding: 4rem 2rem 17rem;
+  padding: 0 2rem 4rem;
   border-radius: 2rem;
+  position: relative;
+  top: 4rem;
 }
 
 .hero-content h1 {
@@ -117,7 +119,8 @@
   }
 
   .hero-content p {
-    font-size: 1.2rem;
+    margin: 1rem 2rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
     text-align: left;
   }
@@ -145,10 +148,10 @@
     max-width: 100%;
     text-align: left;
     padding: 4rem 3rem;
-    top:16rem;
+    top: 22rem;
   }
 
-  
+
 
 
 
@@ -180,17 +183,19 @@
 /* Medium Devices, Tablets */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .hero-content h1 {
-    font-size: 9rem;
+    margin: 0 2rem;
+    font-size: 7.5rem;
     font-weight: 900;
     font-style: italic;
     text-transform: uppercase;
     text-align: left;
-    line-height: 7rem;
-    padding: 10rem 0 0 0;
+    line-height: 6.8rem;
+    padding: 10rem 0rem 1rem 0;
   }
 
   .hero-content p {
-    font-size: 1.2rem;
+    margin: 0 2rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
     text-align: left;
   }
@@ -216,10 +221,10 @@
   .text-content {
     max-width: 100%;
     text-align: left;
-    padding: 4rem 3rem;
+    padding: 4rem 6rem;
   }
 
-  
+
 
 
 
@@ -251,78 +256,7 @@
 /* Small Devices, Phones (Landscape) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .hero-content h1 {
-    font-size: 9rem;
-    font-weight: 900;
-    font-style: italic;
-    text-transform: uppercase;
-    text-align: left;
-    line-height: 7rem;
-    padding: 10rem 0 0 0;
-  }
-
-  .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-
-  .hero-content {
-    flex-direction: column;
-    align-items: center;
-    /* Center align the content */
-  }
-
-  .content-wrapper {
-    flex-direction: column;
-    align-items: center;
-    padding-left: 1rem;
-    /* Corrected padding value */
-    padding-right: 1rem;
-    /* Added padding for right side */
-    text-align: center;
-    /* Center text for smaller screens */
-    margin: 20rem 0 -15rem 0;
-  }
-
-  .text-content {
-    max-width: 100%;
-    text-align: left;
-    padding: 4rem 3rem;
-  }
-
-  
-
-
-
-  .vito-image {
-    width: 100%;
-    padding: 0;
-    margin: -5rem 0 20rem;
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: row;
-    /* Row direction for buttons */
-    gap: 10px;
-    /* Space between buttons */
-    justify-content: center;
-    /* Center the buttons */
-    width: 100%;
-  }
-
-  .button {
-    flex: 1;
-    /* Make buttons grow to fill available space */
-    text-align: center;
-    /* Center text in buttons */
-  }
-}
-
-/* Extra Small Devices, Phones (Portrait) */
-@media (max-width: 575.98px) {
-  .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-weight: 900;
     font-style: italic;
     margin-bottom: 10px;
@@ -356,9 +290,93 @@
   }
 
   .text-content {
+    position: relative;
     max-width: 100%;
     text-align: left;
     padding: 3rem 2rem 17rem;
+    top: 0rem;
+  }
+
+  .hero-content h1 {
+    font-size: 9rem;
+    line-height: 8rem;
+  }
+
+
+  .hero-content p {
+    font-size: 1.3rem;
+    /* Smaller paragraph text for smaller screens */
+  }
+
+  .vito-image {
+    display: none;
+    width: 140%;
+    padding: 0;
+    margin: -19rem 0 20rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    /* Row direction for buttons */
+    gap: 10px;
+    /* Space between buttons */
+    justify-content: center;
+    /* Center the buttons */
+    width: 100%;
+  }
+
+  .button {
+    flex: 1;
+    /* Make buttons grow to fill available space */
+    text-align: center;
+    /* Center text in buttons */
+  }
+}
+
+/* Extra Small Devices, Phones (Portrait) */
+@media (max-width: 575.98px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    /* Center align the content */
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1rem;
+    /* Corrected padding value */
+    padding-right: 1rem;
+    /* Added padding for right side */
+    text-align: center;
+    /* Center text for smaller screens */
+    margin: 20rem 0 0rem 0;
+  }
+
+  .text-content {
+    position: relative;
+    max-width: 100%;
+    text-align: left;
+    padding: 3rem 2rem 17rem;
+    top: 0rem;
+    ;
   }
 
   .hero-content h1 {
