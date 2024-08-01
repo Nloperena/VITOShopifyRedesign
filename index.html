@@ -16,6 +16,8 @@
   <!-- CALCULATOR SECTION -->
   <div id="calculator-section"></div>
 
+  <div id="fancy-button01"></div>
+
   <script src="scripts.js"></script>
   <script>
     // Load sections
@@ -30,6 +32,10 @@
     fetch('calculator.html')
       .then(response => response.text())
       .then(data => document.getElementById('calculator-section').innerHTML = data);
+    
+      fetch('fancy-button01.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('fancy-button01').innerHTML = data);
   </script>
 </body>
 </html>

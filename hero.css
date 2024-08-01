@@ -49,6 +49,11 @@
 
 .text-content {
   max-width: 50%;
+  background-color: #000000bd;
+  max-width: 100%;
+  text-align: left;
+  padding: 4rem 2rem 17rem;
+  border-radius: 2rem;
 }
 
 .hero-content h1 {
@@ -58,6 +63,7 @@
   line-height: 8rem;
   font-style: italic;
   font-weight: 900;
+  letter-spacing: 0.1rem;
 
 }
 
@@ -100,54 +106,91 @@
 
 /* Large Devices, Desktops */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .content-wrapper {
-    flex-direction: column;
-    align-items: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    text-align: center;
-    margin: 15rem 0px -25rem 0;
-}
-  .hero-content h1 {
+  hero-content h1 {
     font-size: 9rem;
     font-weight: 900;
     font-style: italic;
-    margin-bottom: 10px;
     text-transform: uppercase;
     text-align: left;
-    line-height: 8rem;
+    line-height: 7rem;
+    padding: 10rem 0 0 0;
   }
 
   .hero-content p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
     text-align: left;
   }
 
-  .vito-image {
-    width: 90%;
-    height: auto;
-    padding: 0rem 0rem 10rem 0rem;
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    /* Center align the content */
   }
-  .text-content{
+
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1rem;
+    /* Corrected padding value */
+    padding-right: 1rem;
+    /* Added padding for right side */
+    text-align: center;
+    /* Center text for smaller screens */
+    margin: 20rem 0 -15rem 0;
+  }
+
+  .text-content {
+    position: relative;
+    max-width: 100%;
+    text-align: left;
+    padding: 4rem 3rem;
+    top:16rem;
+  }
+
+  
+
+
+
+  .vito-image {
     width: 100%;
+    padding: 0;
+    margin: -5rem 0 20rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    /* Row direction for buttons */
+    gap: 10px;
+    /* Space between buttons */
+    justify-content: center;
+    /* Center the buttons */
+    width: 100%;
+  }
+
+  .button {
+    flex: 1;
+    /* Make buttons grow to fill available space */
+    text-align: center;
+    /* Center text in buttons */
   }
 }
 
 /* Medium Devices, Tablets */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .hero-content h1 {
-    font-size: 10rem;
+    font-size: 9rem;
     font-weight: 900;
     font-style: italic;
     text-transform: uppercase;
     text-align: left;
-    line-height: 9rem;
+    line-height: 7rem;
     padding: 10rem 0 0 0;
   }
 
   .hero-content p {
-    font-size: 2.0rem;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
     text-align: left;
   }
@@ -176,6 +219,7 @@
     padding: 4rem 3rem;
   }
 
+  
 
 
 
@@ -201,7 +245,7 @@
     /* Make buttons grow to fill available space */
     text-align: center;
     /* Center text in buttons */
-  } 
+  }
 }
 
 /* Small Devices, Phones (Landscape) */
@@ -314,7 +358,7 @@
   .text-content {
     max-width: 100%;
     text-align: left;
-    padding: 3rem 0rem 17rem;
+    padding: 3rem 2rem 17rem;
   }
 
   .hero-content h1 {

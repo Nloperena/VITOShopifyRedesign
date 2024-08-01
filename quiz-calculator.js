@@ -1,3 +1,23 @@
+
+        document.addEventListener('mousedown', function() {
+            document.body.classList.add('clicked');
+            document.querySelectorAll('a, button').forEach(function(element) {
+                element.classList.add('clicked');
+            });
+        });
+
+        document.addEventListener('mouseup', function() {
+            setTimeout(function() {
+                document.body.classList.remove('clicked');
+                document.querySelectorAll('a, button').forEach(function(element) {
+                    element.classList.remove('clicked');
+                });
+            }, 150);
+        });
+    
+
+
+
 function calculateROI() {
     // Get input values
     const weeklyConsumption = parseFloat(document.getElementById('weeklyConsumption').value); // Weekly oil consumption
