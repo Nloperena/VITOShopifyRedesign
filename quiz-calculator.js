@@ -118,7 +118,7 @@ function getRecommendation(foodType) {
         <a href="path/to/product-page" target="_blank">Learn more about this product</a>
         <img src="${imgSrc}" alt="${result}" style="max-width: 100%; height: auto;">
         <h2>We Recommend the ${result}</h2>
-        <div class="action-buttons">
+        <div class="button-wrapper">
             <button class="button" onclick="startQuiz()">Start over</button>
             <button class="button" onclick="placeInCart()">Place in Cart</button>
             <button class="button" onclick="document.location='#calculator-section'">Check Savings</button>
