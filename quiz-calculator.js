@@ -1,22 +1,4 @@
-
-        document.addEventListener('mousedown', function() {
-            document.body.classList.add('clicked');
-            document.querySelectorAll('a, button').forEach(function(element) {
-                element.classList.add('clicked');
-            });
-        });
-
-        document.addEventListener('mouseup', function() {
-            setTimeout(function() {
-                document.body.classList.remove('clicked');
-                document.querySelectorAll('a, button').forEach(function(element) {
-                    element.classList.remove('clicked');
-                });
-            }, 150);
-        });
-    
-
-
+// quiz-calculator.js
 
 function calculateROI() {
     // Get input values
@@ -46,93 +28,6 @@ function calculateROI() {
     resultElement.style.display = 'block'; // Ensure the results are shown
 }
 
-function startQuiz() {
-    document.querySelector('.start-button-container').style.display = 'none';
-    document.querySelector('.quiz-container').style.display = 'block';
-    resetQuiz();
-}
-
-function resetQuiz() {
-    answers = {};
-    document.querySelectorAll('.quiz-slide').forEach(slide => {
-        slide.classList.remove('left', 'right', 'active');
-    });
-    document.querySelector('#slide1').classList.add('active');
-    document.querySelector('#quiz-result').style.display = 'none'; // Hide the results section initially
-    document.querySelector('#quiz-action-buttons').classList.remove('active'); // Hide the action buttons initially
-    document.querySelector('#quiz-result').innerHTML = 'Click Get Recommendation to see which VITO machine is best for you';
-}
-
-function nextSlide(current, answer) {
-    answers[`question${current}`] = answer;
-    const currentSlide = document.querySelector(`#slide${current}`);
-    const nextSlide = document.querySelector(`#slide${current + 1}`);
-    currentSlide.classList.remove('active');
-    currentSlide.classList.add('left');
-    nextSlide.classList.remove('right');
-    nextSlide.classList.add('active');
-}
-
-function getRecommendation(foodType) {
-    answers['foodType'] = foodType;
-    const { question1, question2 } = answers;
-    let result = "No recommendation available";
-    let imgSrc = "";
-
-    if (question1 === 1) { // 1-3 fryers
-        if (question2 === 22) { // Up to 22 pounds
-            result = (foodType === "Carbs") ? "VITO 30" : "VITO VL";
-            imgSrc = (foodType === "Carbs") ? "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/v30.png?v=1704294802" : "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
-        } else if (question2 === 37) { // Up to 37 pounds
-            result = (foodType === "Carbs") ? "VITO VM" : "VITO VL";
-            imgSrc = (foodType === "Carbs") ? "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vm.png?v=1704295536" : "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
-        } else { // More than 37 pounds
-            result = (foodType === "Carbs") ? "VITO VM" : "VITO VL";
-            imgSrc = (foodType === "Carbs") ? "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vm.png?v=1704295536" : "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
-        }
-    } else if (question1 === 4) { // 4 fryers
-        if (question2 === 22) { // Up to 22 pounds
-            result = (foodType === "Carbs") ? "VITO VM" : "VITO VL";
-            imgSrc = (foodType === "Carbs") ? "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vm.png?v=1704295536" : "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
-        } else if (question2 === 37) { // Up to 37 pounds
-            result = (foodType === "Carbs") ? "VITO VM" : "VITO VL";
-            imgSrc = (foodType === "Carbs") ? "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vm.png?v=1704295536" : "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
-        } else { // More than 37 pounds
-            result = "VITO VL";
-            imgSrc = "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
-        }
-    } else { // More than 4 fryers
-        result = "VITO VL";
-        imgSrc = "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
-    }
-
-    // Hide current active slide and show final result slide
-    document.querySelector('.quiz-slide.active').classList.remove('active');
-    const resultSlide = document.querySelector('#slide4');
-    resultSlide.classList.remove('right');
-    resultSlide.classList.add('active');
-
-    // Display results and buttons
-    document.getElementById('final-results').innerHTML = `
-    <div class="result-wrapper">
-        <a href="path/to/product-page" target="_blank">Learn more about this product</a>
-        <img src="${imgSrc}" alt="${result}" style="max-width: 100%; height: auto;">
-        <h2>We Recommend the ${result}</h2>
-        <div class="button-wrapper">
-            <button class="button" onclick="startQuiz()">Start over</button>
-            <button class="button" onclick="placeInCart()">Place in Cart</button>
-            <button class="button" onclick="document.location='#calculator-section'">Check Savings</button>
-        </div>
-    </div>
-    `;
-}
-
-
-
-// quiz-calculator.js
-
-// Existing code...
-
 function clearCalculator() {
     // Clear all input fields
     document.getElementById('weeklyConsumption').value = '';
@@ -147,4 +42,3 @@ function clearCalculator() {
     resultElement.innerText = 'RESULTS WILL APPEAR HERE';
     resultElement.style.display = 'none'; // Hide the results
 }
-
