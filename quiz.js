@@ -74,6 +74,8 @@ function getRecommendation(foodType) {
     const { question1, question2 } = answers;
     let result = "No recommendation available";
     let imgSrc = "";
+    let variantId = ""; // Variable to store the variant ID
+    let learnMoreUrl = "";
 
     console.log('Question 1:', question1);
     console.log('Question 2:', question2);
@@ -83,42 +85,58 @@ function getRecommendation(foodType) {
         if (question2 === 22) {
             result = (foodType === "Carbs") ? "VITO 30" : "VITO VL";
             imgSrc = (foodType === "Carbs") ? "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/v30.png?v=1704294802" : "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
+            variantId = (foodType === "Carbs") ? "4490648223755" : "39563968643147"; // VITO 30 or VITO VL
+            learnMoreUrl = (foodType === "Carbs") ? "https://shop.vitofryfilter.com/products/vito-30-oil-filter-system-frying-oil-filter-cooking-oil-filter" : "https://shop.vitofryfilter.com/products/vito-vl-oil-filter-system-frying-oil-filter-cooking-oil-filter";
         } else if (question2 === 37) {
             result = (foodType === "Carbs") ? "VITO VM" : "VITO VL";
             imgSrc = (foodType === "Carbs") ? "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vm.png?v=1704295536" : "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
+            variantId = (foodType === "Carbs") ? "4490764451851" : "39563968643147"; // VITO VM or VITO VL
+            learnMoreUrl = (foodType === "Carbs") ? "https://shop.vitofryfilter.com/products/vito-50-oil-filter-system-frying-oil-filter-cooking-oil-filter" : "https://shop.vitofryfilter.com/products/vito-vl-oil-filter-system-frying-oil-filter-cooking-oil-filter";
         } else {
             result = (foodType === "Carbs") ? "VITO VM" : "VITO VL";
             imgSrc = (foodType === "Carbs") ? "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vm.png?v=1704295536" : "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
+            variantId = (foodType === "Carbs") ? "4490764451851" : "39563968643147"; // VITO VM or VITO VL
+            learnMoreUrl = (foodType === "Carbs") ? "https://shop.vitofryfilter.com/products/vito-50-oil-filter-system-frying-oil-filter-cooking-oil-filter" : "https://shop.vitofryfilter.com/products/vito-vl-oil-filter-system-frying-oil-filter-cooking-oil-filter";
         }
     } else if (question1 === 4) {
         if (question2 === 22) {
             result = (foodType === "Carbs") ? "VITO VM" : "VITO VL";
             imgSrc = (foodType === "Carbs") ? "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vm.png?v=1704295536" : "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
+            variantId = (foodType === "Carbs") ? "4490764451851" : "39563968643147"; // VITO VM or VITO VL
+            learnMoreUrl = (foodType === "Carbs") ? "https://shop.vitofryfilter.com/products/vito-50-oil-filter-system-frying-oil-filter-cooking-oil-filter" : "https://shop.vitofryfilter.com/products/vito-vl-oil-filter-system-frying-oil-filter-cooking-oil-filter";
         } else if (question2 === 37) {
             result = (foodType === "Carbs") ? "VITO VM" : "VITO VL";
             imgSrc = (foodType === "Carbs") ? "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vm.png?v=1704295536" : "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
+            variantId = (foodType === "Carbs") ? "4490764451851" : "39563968643147"; // VITO VM or VITO VL
+            learnMoreUrl = (foodType === "Carbs") ? "https://shop.vitofryfilter.com/products/vito-50-oil-filter-system-frying-oil-filter-cooking-oil-filter" : "https://shop.vitofryfilter.com/products/vito-vl-oil-filter-system-frying-oil-filter-cooking-oil-filter";
         } else {
             result = "VITO VL";
             imgSrc = "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
+            variantId = "39563968643147"; // VITO VL
+            learnMoreUrl = "https://shop.vitofryfilter.com/products/vito-vl-oil-filter-system-frying-oil-filter-cooking-oil-filter";
         }
     } else {
         result = "VITO VL";
         imgSrc = "https://cdn.shopify.com/s/files/1/0004/2496/8203/files/vl.png?v=1704295457";
+        variantId = "39563968643147"; // VITO VL
+        learnMoreUrl = "https://shop.vitofryfilter.com/products/vito-vl-oil-filter-system-frying-oil-filter-cooking-oil-filter";
     }
 
     console.log(`Recommended model: ${result}`);
     console.log(`Image URL: ${imgSrc}`);
+    console.log(`Variant ID: ${variantId}`);
+    console.log(`Learn More URL: ${learnMoreUrl}`);
 
     const finalResults = document.getElementById('final-results');
     if (finalResults) {
         finalResults.style.display = 'flex'; // Ensure the result-wrapper is displayed
         finalResults.innerHTML = `
-            <a href="path/to/product-page" target="_blank">Learn more about this product</a>
+            <a href="${learnMoreUrl}" target="_blank">Learn more about this product</a>
             <img id="recommendation-img" src="${imgSrc}" alt="${result}" style="max-width: 100%; height: auto;">
             <h2>We Recommend the ${result}</h2>
             <div class="button-wrapper">
                 <button class="button" onclick="startQuiz()">Start over</button>
-                <button class="button" onclick="placeInCart()">Place in Cart</button>
+                <button class="button" onclick="addToCart(${variantId})">Place in Cart</button>
                 <button class="button" onclick="document.location='#calculator-section'">Check Savings</button>
             </div>
         `;
@@ -132,6 +150,31 @@ function getRecommendation(foodType) {
     } else {
         console.error('Final results container not found.');
     }
+}
+
+function addToCart(variantId) {
+    fetch('https://shop.vitofryfilter.com/cart/add.js', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: JSON.stringify({
+            items: [{
+                quantity: 1,
+                id: variantId // Use the Variant ID here
+            }]
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Added to cart:', data);
+        alert('Product added to cart!');
+    })
+    .catch(error => {
+        console.error('Error adding to cart:', error);
+        alert('There was an error adding the product to your cart.');
+    });
 }
 
 function adjustQuizHeight() {
@@ -169,3 +212,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Ensure responsiveness on window resize as well
 window.addEventListener('resize', adjustQuizHeight);
+
